@@ -1,5 +1,7 @@
 <?php
-    require_once("includes/top.php");
+echo __DIR__."/includes";
+   ini_set("include_path",__DIR__."/includes");
+require_once("top.php");
     // all we're doing is providing a symlink to http://www.google.com/reader/atom/user/-/state/com.google/created
     // that can be accessed via: http://readerhelper.com/[USERNAME]/[RANDOM PRIVATE ID]/
     //...so far
