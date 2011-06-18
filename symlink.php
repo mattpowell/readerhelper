@@ -1,4 +1,5 @@
 <?php
+    require_once("includes/top.php");
 
 //for now, lets just pull the url in question on demand and spit out the contents here....
 

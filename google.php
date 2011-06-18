@@ -1,4 +1,5 @@
 <?php
+    require_once("includes/top.php");
 
 $action=$_GET["action"];
 

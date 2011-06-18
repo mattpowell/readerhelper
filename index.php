@@ -1,5 +1,5 @@
 <?php
-
+    require_once("includes/top.php");
     // all we're doing is providing a symlink to http://www.google.com/reader/atom/user/-/state/com.google/created
     // that can be accessed via: http://readerhelper.com/[USERNAME]/[RANDOM PRIVATE ID]/
     //...so far

@@ -1,4 +1,5 @@
 <?php
+    require_once("top.php");
 /**
  * it's ok to tear up a little bit when looking at this class. I wrote this junk when I was like 12 (so I tear up for a different reason ;). It needs a SERIOUS upgrade instead of just monkey-patching crap. grrr :(
  *
