@@ -8,6 +8,10 @@ ob_start();
 $SERVER_SALT=$_SERVER["SERVER_SALT"];
 require_once($APPLICATION_ENVIRONMENT=="dev"?"dev-Config.class.php":($APPLICATION_ENVIRONMENT=="qa"?"qa-Config.class.php":"prod-Config.class.php"));
 require_once("Access.class.php");
+
+if (!isset($_SERVER['tables_exist'])){
+    require_once("create_tables.php");
+}
 ob_end_flush();
 
 
