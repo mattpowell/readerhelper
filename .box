@@ -1,5 +1,3 @@
-
-
 url_rewrites:
     - "^.*awesome.*$ /matt.txt"
 #    - "^(authorize|ZZZ)\/([a-zA-Z]+)\/?$ /$2.php?action=$1&"
