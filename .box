@@ -1,9 +1,8 @@
 url_rewrites:
-    - "^\/awesome$ /matt.txt"
     - "^/(authorize|ZZZ)\/([a-zA-Z]+)\/?$ /$2.php?action=$1&"
-#    - "^/(notes|shared)\/([a-zA-Z]+)\/?$ /index.php?product=$1&action=$2"
-#    - "^/([^\/]*?)\/([^\/]*?)\/?$ /symlink.php?username=$1&auth=$2"
-php_display_errors: Off
+    - "^/(notes|shared)\/([a-zA-Z]+)\/?$ /index.php?product=$1&action=$2"
+    - "^/([^\/]*?)\/([^\/]*?)\/?$ /symlink.php?username=$1&auth=$2"
+php_display_errors: On
 php_extensions:
 	- curl
 	- dom
