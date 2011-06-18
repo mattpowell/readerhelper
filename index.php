@@ -9,9 +9,9 @@
     $action=$_GET["action"];
 
     if (isset($uid)){
-        $conn=mysql_connect(Config::DB_HOST,Config::DB_USER,Config::DB_PASSWORD) or die("Error. Try again later.");
-        mysql_select_db(Config::DB_NAME);
-        $access=new Access("google",$uid,Config::GOOGLE_SERVICE_ID);
+        $conn=mysql_connect(Config::DB_HOST,Config::DB_USER(),Config::DB_PASSWORD()) or die("Error. Try again later.");
+        mysql_select_db(Config::DB_NAME());
+        $access=new Access("google",$uid,Config::GOOGLE_SERVICE_ID());
         $name=$access->get("name");
         if (empty($name))$name="there";
 
@@ -89,7 +89,7 @@
   <script src="/js/global.js"></script>
 
   <script>
-    var _gaq=[['_setAccount','<?=Config::GOOGLE_ANALYTICS_UID?>'],['_trackPageview']];
+    var _gaq=[['_setAccount','<?=Config::GOOGLE_ANALYTICS_UID()?>'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
     s.parentNode.insertBefore(g,s)}(document,'script'));

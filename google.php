@@ -9,13 +9,13 @@ if ($action=="authorize"){
     require_once('OAuth.php');
 
     if (isset($_SESSION['uid'])){
-        $access = new Access("google", $_SESSION['uid'], Config::GOOGLE_SERVICE_ID);
+        $access = new Access("google", $_SESSION['uid'], Config::GOOGLE_SERVICE_ID());
         $oauth_access_token = $access->get("oauth_access_token");
         $oauth_access_token_secret = $access->get("oauth_access_token_secret");
     }
 
-    $CONSUMER_KEY = Config::GOOGLE_CONSUMER_KEY;
-    $CONSUMER_SECRET = Config::GOOGLE_CONSUMER_SECRET;
+    $CONSUMER_KEY = Config::GOOGLE_CONSUMER_KEY();
+    $CONSUMER_SECRET = Config::GOOGLE_CONSUMER_SECRET();
 
     $consumer = new OAuthConsumer($CONSUMER_KEY, $CONSUMER_SECRET);
     $hmac_method = new OAuthSignatureMethod_HMAC_SHA1();

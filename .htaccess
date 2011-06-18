@@ -6,6 +6,9 @@ AddType text/cache-manifest .appcache
 AddType text/x-component .htc
 
 RewriteEngine On
+#if file exists then [L]
+RewriteCond %{DOCUMENT_ROOT}/$1 -f
+RewriteRule ^(.*)$ $1 [L]
 RewriteRule ^(authorize|ZZZ)/([a-zA-Z]+)/?$ /$2.php?action=$1& [PT,QSA,L]
 RewriteRule ^(notes|shared)/([a-zA-Z]+)/?$ /index.php?product=$1&action=$2 [PT,QSA,L]
 RewriteRule ^([^/]*?)/([^/]*?)/?$ /symlink.php?username=$1&auth=$2 [PT,QSA,L]
