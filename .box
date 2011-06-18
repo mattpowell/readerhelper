@@ -1,10 +1,5 @@
 
 url_rewrites:
-    -
-    rule: "^(.*)$ $1"
-    conditions:
-        - "-f $request_filename"
-        - "!-d $request_filename"
     - "^(authorize|ZZZ)\/([a-zA-Z]+)\/?$ /$2.php?action=$1&"
     - "^(notes|shared)\/([a-zA-Z]+)\/?$ /index.php?product=$1&action=$2"
     - "^([^\/]*?)\/([^\/]*?)\/?$ /symlink.php?username=$1&auth=$2"
