@@ -12,4 +12,3 @@ url_rewrites:
 php_display_errors: Off
 
 php_value: auto_prepend_file "top.php"
-
