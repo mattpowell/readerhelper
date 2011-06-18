@@ -7,10 +7,10 @@ class Config{
     const prod=true;
 
     const URL="readerhelper.com";
-    const DB_HOST="localhost";
-    const DB_USER="F0euVAZ4cnTG4lL2BTD+xunv22ajI/wyLuke/mTBfsY=";
-    const DB_NAME="o6mQe251hcaJjsDl1v59xbKvXqzRlZO/Lrf5byXCpBk=";
-    const DB_PASSWORD="QvnsJ+b2AEwQYr8c2ARBDGHDYexkWcdnMCjCZkWvBLM=";
+    const DB_HOST="localhost:/tmp/mysql/helena.sock";
+    const DB_USER="L/pSXy+zrJVcjjW9u/mC7IPI0jfs6CKjfseEJqvKySc=";
+    const DB_NAME="eaK48FQj7VJiHqQEoKMrFCw5gr8/E4vJ2C28pav0Ij8=";
+    const DB_PASSWORD="FYelO0B969YkQPpX8zs881YDmtAIJRDsYWYmSNt+izQ=";
 
     const MEMCACHEURL="T2XEYHZy2fNUD7Mx7sxZY2El3iT8lHq1Kf8zf5McwnI=";
     const GOOGLE_ANALYTICS_UID="tp6r0E7NMNUEtV8VnIZi3UquYD8pH3CZdUbuLzlik5E=";
