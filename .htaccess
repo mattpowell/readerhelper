@@ -1,0 +1,12 @@
+SetEnv APPLICATION_ENVIRONMENT dev
+
+php_value auto_prepend_file "top.php"
+
+AddType text/cache-manifest .appcache
+AddType text/x-component .htc
+
+RewriteEngine On
+RewriteRule ^(authorize|ZZZ)/([a-zA-Z]+)/?$ /$2.php?action=$1& [PT,QSA,L]
+RewriteRule ^(notes|shared)/([a-zA-Z]+)/?$ /index.php?product=$1&action=$2 [PT,QSA,L]
+RewriteRule ^([^/]*?)/([^/]*?)/?$ /symlink.php?username=$1&auth=$2 [PT,QSA,L]
+
